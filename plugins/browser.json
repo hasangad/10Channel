@@ -1,0 +1,39 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.10Channel"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.10Channel"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.10Channel"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.10Channel"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.10Channel"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.10Channel"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.10Channel"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.10Channel"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.10Channel"
+        }
+    },
+    "dependent_plugins": {}
+}

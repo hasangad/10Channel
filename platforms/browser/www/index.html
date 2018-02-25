@@ -1,227 +1,257 @@
-<<<<<<< HEAD:platforms/browser/www/index.html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<title>مدونة حسن جاد التقنية</title>
-<!--<base href="https://hasangad.com/">-->
-<!--<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
 
-<link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap.min-css-controllers'  href='bs/css/controllers.css' type='text/css' media='all' />
-<link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' />-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--  CSS  -->
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />
-<link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      قناة 10
+    </title>
+    <!--<base href="https://hasangad.com/">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css"/>
+    <link rel='stylesheet' id='bootstrap.min-css' href="bs/scss/bootstrap.css" type='text/css' media='all'/>
+    <link rel='stylesheet' id='bootstrap.min-css-rtl' href='bs/scss/bootstrap-rtl.min.css' type='text/css' media='all'/>
+    <link rel='stylesheet' id='css-style' href='css/style.css' type='text/css' media='all'/>
+    <link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all'/>
+  </head>
 
-<link rel='stylesheet' id='css-style'  href='css/style.css' type='text/css' media='all' />
-<link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' />
-<!-- JavaScript -->
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
-<script>
-$.mobile.changePage( "nextPage.html", {
-  transition: "slide",
-  reverse: true
-});
-</script>
- <script>
+  <body class="container-fluid">
+    <div class="preloader"></div>
+    <div data-role="page" id="main_page">
+      <!-- Start page header -->
+      <div data-role="header" data-position="fixed" class="header">
+        <a data-icon="bars" data-iconpos="notext" data-role="button" href="#menu" class="bars_icon ui-btn-right">القائمة</a>
 
+        <ul>
 
-   /*var url="http://app.madadrental.com/send-mail.php?name1="+name+"&email1="+email+"&car_id1="+car_id+"&message1="+message+"&contact1="+contact+"&pickup_location_id1="+pickup_location_id+"&pickup_date1="+pickup_date+"&pickup_time1="+pickup_time+"&dropoff_location_id1="+dropoff_location_id+"&dropoff_date1="+dropoff_date+"&dropoff_time1="+dropoff_time+"&body_type_id1="+body_type_id+"&fuel_type_id1="+fuel_type_id+"";*/
-   var url ="https://hasangad.com/blog-posts-api/";
-   $.getJSON(url,function(result){
-         console.log(result);
+          <li>
+            <a href="#main_page" data-transition="slide" data-direction="reverse">
+              الرئيسية
+            </a>
+          </li>
+          <li>
+            <a href="#main_page" data-transition="slide" data-direction="reverse">
+              البرامج
+            </a>
+          </li>
+          <li>
+            <a href="#main_page" data-transition="slide" data-direction="reverse">
+              مواعيد البث
+            </a>
+          </li>
+          <li>
+            <a href="#main_page" data-transition="slide" data-direction="reverse">
+              عن القناة
+            </a>
+          </li>
+          <li>
+            <a href="#main_page" data-transition="slide" data-direction="reverse">
+              البث المباشر
+            </a>
+          </li>
+        </ul>
 
-  $.each(result, function(i , post){
+      </div>
+      <!-- End page header -->
 
-      /*$(".about").append('<div class="row no-padding"><h2>'+loc.loc.title+'</h2><h3>الهاتف : '+loc.loc.phn+'</h3><iframe width="100%" height="200" frameborder="0" style="border:1px solid #f0f0f0; height:200px" src="https://www.google.com/maps/embed/v1/place?q='+loc.loc.lat+','+loc.loc.lng+'&amp;key=AIzaSyBy6xPT2Cwvz9SLwDHXticdg3Hr88YHi10"></iframe></div><br>');*/
+      <!-- start page menu -->
+      <div data-role="panel" id="menu" data-position="right" data-display="push">
+        <div class="ui-panel-inner-top-HG">
+          <!-- <h3>القائمة</h3> -->
+        </div>
+        <!-- -->
+        <ul data-role="listview">
+          <li data-icon="home">
+            <a href="#main_page">الرئيسية</a>
+          </li>
+          <li data-icon="arrow-l">
+            <a href="#main_page" data-transition="slide" data-direction="reverse" data-iconpos="notext">
+              البرامج
+            </a>
+          </li>
+          <li data-icon="arrow-l">
+            <a href="#main_page" data-transition="slide" data-direction="reverse" data-iconpos="notext">
+              مواعيد البث
+            </a>
+          </li>
+          <li data-icon="arrow-l">
+            <a href="#main_page" data-transition="slide" data-direction="reverse" data-iconpos="notext">
+              عن القناة
+            </a>
+          </li>
+          <li data-icon="arrow-l">
+            <a href="#main_page" data-transition="slide" data-direction="reverse" data-iconpos="notext">
+              البث المباشر
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /panel - End page menu -->
 
-      $("#main_page .posts").append('<div class="col-xs-6 post_area"><a href="#post'+post.post.id+'" data-rel="dialog" data-transition="flip" ><img src="'+post.post.thumb+'"><h2>'+post.post.title+'</h2><span><i class="fa fa-calendar"></i> &nbsp;'+post.post.date+'</span></a></div>');
-      $("body").append('<div data-role="page" id="post'+post.post.id+'" class="post_content"><div data-role="header" data-position="fixed" class="post_header"></div><img src="'+post.post.thumb+'"><h2>'+post.post.title+'</h2><span><i class="fa fa-calendar"></i> &nbsp;'+post.post.date+'</span></a><p>'+post.post.content+'</p></div>');
+      <div role="main" class="ui-content posts">
 
-  });
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <!-- <ol class="carousel-indicators"> <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> <li data-target="#carouselExampleIndicators"
+          data-slide-to="2"></li> </ol>-->
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
 
- });
-$(document).ready(function() {
+              <a href="#" class="main_item">
+                <div class="main_item_grad"></div>
+                <img src="images/main-1.jpg" class="img-responsive"/>
+                <img class="ten_logo_onfly" src="images/logo.jpg">
+                <div class="ten_logo_onfly_text">
+                  <span>يومياً في
+                  </span>
+                  <h2>7:30 مساءً</h2>
+                  <small>
+                    بتوقيت القاهرة
+                  </small>
+                </div>
+              </a>
 
-});
-</script>
+            </div>
+            <div class="carousel-item">
 
-</head>
-<body>
-<div data-role="page" id="main_page">
-  <!-- Start page header  -->
-<div data-role="header" data-position="fixed" class="header">
-<img src="images/logo.png" alt="" title="" width="" height="" class="logo">
-<a data-icon="bars" data-iconpos="notext" data-role="button" href="#menu" class="bars_icon ui-btn-right">القائمة</a>
-</div>
-<!-- End page header  -->
+              <a href="#" class="main_item">
+                <div class="main_item_grad"></div>
+                <img src="images/main-1.jpg" class="img-responsive"/>
+                <img class="ten_logo_onfly" src="images/logo.jpg">
+                <div class="ten_logo_onfly_text">
+                  <span>يومياً في
+                  </span>
+                  <h2>7:30 مساءً</h2>
+                  <small>
+                    بتوقيت القاهرة
+                  </small>
+                </div>
+              </a>
+            </div>
+            <div class="carousel-item">
 
-<!-- start page menu  -->
-<div data-role="panel" id="menu" data-position="right" data-display="push">
-<div class="ui-panel-inner-top-HG">
-    <!-- <h3>القائمة</h3> -->
-</div>
-<!--  -->
-    <ul data-role="listview">
-      <li data-icon="home" ><a href="#main_page" >الرئيسية</a></li>
-      <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">أخبار تقنية </a></li>
-      <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">تصميم المواقع</a></li>
-      <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">تطوير الووردبريس</a></li>
-      <li data-icon="star" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">مفضلتي</a></li>
-      <li data-icon="mail" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">القائمة البريدية</a></li>
-      <li data-icon="info" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">إسألني سؤالاً</a></li>
-   </ul>
+              <a href="#" class="main_item">
+                <div class="main_item_grad"></div>
+                <img src="images/main-1.jpg" class="img-responsive"/>
+                <img class="ten_logo_onfly" src="images/logo.jpg">
+                <div class="ten_logo_onfly_text">
+                  <span>يومياً في
+                  </span>
+                  <h2>7:30 مساءً</h2>
+                  <small>
+                    بتوقيت القاهرة
+                  </small>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
 
-</div>
-<!-- /panel - End page menu -->
+        <a href="#" class="main_item">
+          <div class="main_item_grad"></div>
+          <img src="images/main-1.jpg" class="img-responsive"/>
+          <img class="ten_logo_onfly" src="images/logo.jpg">
+          <div class="ten_logo_onfly_text">
+            <span>يومياً في
+            </span>
+            <h2>7:30 مساءً</h2>
+            <small>
+              بتوقيت القاهرة
+            </small>
+          </div>
+        </a>
+        <title class="main_title">قريباً على شاشتنا</title>
 
-<div role="main" class="ui-content posts">
+      </div>
 
-</div>
-<!-- End of POSTS / UI CONTENT  -->
-</div>
-<!-- End Of main page  -->
+      <!-- End of POSTS / UI CONTENT -->
 
+    </div>
+    <!-- End Of main page -->
 
+    <div class="app_body container-fluid">
+      <!-- <div class="hr"></div> -->
+      <div class="posts container-fluid"></div>
+      <!-- End of about -->
 
-<div class="app_body container-fluid">
-<!-- <div class="hr"></div> -->
-<div class="posts container-fluid">
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+    <script>
+      //alert('test');
+      $.mobile.changePage("nextPage.html", {
+        transition: "slide",
+        reverse: true
+      });
+    </script>
+    <script>
+      /*  var url = "https://hasangad.com/blog-posts-api/";
+                                               $.getJSON(url, function(result) {
+                                                    console.log(result);
+                                                    $.each(result, function(i, post) {
+                                                       $("#main_page .posts").append(
+                                                        '<div class="col-xs-6 post_area"><a href="#post' + post.post.id + '" data-rel="dialog" data-transition="slideup"><img src="' + post.post.thumb + '"><h2>' + post.post.title + '</h2><span><i class="fa fa-calendar"></i> &nbsp;' + post.post.date + '</sp' +
+                                                        'an></a></div>'
+                                                      );
+                                                      $("body").append(
+                                                        '<div data-role="page" id="post' + post.post.id + '" class="post_content"><div data-role="header" data-position="fixed" class="post_header"><h2>' + post.post.full_title + '</h2><span class="close_post ui-btn-inner ui-btn-corner-all" aria-hidden="tru' +
+                                                        'e"><span class="ui-btn-text"></span><span class="ui-icon ui-icon-delete ui-icon-shadow"></span></span></div><img src="' + post.post.thumb + '"><span><i class="fa fa-calendar"></i> &nbsp;' + post.post.date + '</span></a><p>' + post.post.content + '<' +
+                                                        '/p></div>'
+                                                      );
+                                                    });
+                                                  });*/
 
+      $(document).ready(function () {
 
-</div><!-- End of about -->
+        //  alert('JQuery is fine');
 
+        $('.carousel').carousel({interval: 3500})
 
-</div>
-<!-- End of app body -->
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<!--<script type="text/javascript" src="js/index.js"></script>-->
-<script type="text/javascript">
-            app.initialize();
-        </script>
+        /* dependencies:
 
-</body>
+//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js
+//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js
+//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js */
+
+        $(".carousel").swipe({
+
+          swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+
+            if (direction == 'left') 
+              $(this).carousel('next');
+            if (direction == 'right') 
+              $(this).carousel('prev');
+
+            }
+          ,
+          allowPageScroll: "vertical"
+
+        });
+
+        /*  $(function() {
+            $('.carousel').carousel({
+              interval: 2000
+            });
+            $('.carousel-control.right').trigger('click');
+          });*/
+
+        $(".preloader").fadeOut(500);
+      });
+    </script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+      app.initialize();
+    </script>
+  </body>
+
 </html>
-=======
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<title>مدونة حسن جاد التقنية</title>
-<!--<base href="https://hasangad.com/">-->
-<!--<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-
-<link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap.min-css-controllers'  href='bs/css/controllers.css' type='text/css' media='all' />
-<link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' />-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--  CSS  -->
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />
-<link rel='stylesheet' id='bootstrap.min-css'  href='bs/css/bootstrap.min.css' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap.min-css-rtl'  href='bs/css/bootstrap-rtl.min.css' type='text/css' media='all' />
-
-<link rel='stylesheet' id='css-style'  href='css/style.css' type='text/css' media='all' />
-<link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' />
-<!-- JavaScript -->
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
-<script>
-$.mobile.changePage( "nextPage.html", {
-  transition: "slide",
-  reverse: true
-});
-</script>
- <script>
-
-
-   /*var url="http://app.madadrental.com/send-mail.php?name1="+name+"&email1="+email+"&car_id1="+car_id+"&message1="+message+"&contact1="+contact+"&pickup_location_id1="+pickup_location_id+"&pickup_date1="+pickup_date+"&pickup_time1="+pickup_time+"&dropoff_location_id1="+dropoff_location_id+"&dropoff_date1="+dropoff_date+"&dropoff_time1="+dropoff_time+"&body_type_id1="+body_type_id+"&fuel_type_id1="+fuel_type_id+"";*/
-   var url ="https://hasangad.com/blog-posts-api/";
-   $.getJSON(url,function(result){
-         console.log(result);
-
-  $.each(result, function(i , post){
-
-      /*$(".about").append('<div class="row no-padding"><h2>'+loc.loc.title+'</h2><h3>الهاتف : '+loc.loc.phn+'</h3><iframe width="100%" height="200" frameborder="0" style="border:1px solid #f0f0f0; height:200px" src="https://www.google.com/maps/embed/v1/place?q='+loc.loc.lat+','+loc.loc.lng+'&amp;key=AIzaSyBy6xPT2Cwvz9SLwDHXticdg3Hr88YHi10"></iframe></div><br>');*/
-
-      $("#main_page .posts").append('<div class="col-xs-6 post_area"><a href="#post'+post.post.id+'" data-rel="dialog" data-transition="flip" ><img src="'+post.post.thumb+'"><h2>'+post.post.title+'</h2><span><i class="fa fa-calendar"></i> &nbsp;'+post.post.date+'</span></a></div>');
-      $("body").append('<div data-role="page" id="post'+post.post.id+'" class="post_content"><div data-role="header" data-position="fixed" class="post_header"></div><img src="'+post.post.thumb+'"><h2>'+post.post.title+'</h2><span><i class="fa fa-calendar"></i> &nbsp;'+post.post.date+'</span></a><p>'+post.post.content+'</p></div>');
-
-  });
-
- });
-$(document).ready(function() {
-
-});
-</script>
-
-</head>
-<body>
-<div data-role="page" id="main_page">
-  <!-- Start page header  -->
-<div data-role="header" data-position="fixed" class="header">
-<img src="images/logo.png" alt="" title="" width="" height="" class="logo">
-<a data-icon="bars" data-iconpos="notext" data-role="button" href="#menu" class="bars_icon ui-btn-right">القائمة</a>
-</div>
-<!-- End page header  -->
-
-<!-- start page menu  -->
-<div data-role="panel" id="menu" data-position="right" data-display="push">
-<div class="ui-panel-inner-top-HG">
-    <!-- <h3>القائمة</h3> -->
-</div>
-<!--  -->
-    <ul data-role="listview">
-      <li data-icon="home" ><a href="#main_page" >الرئيسية</a></li>
-      <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">أخبار تقنية </a></li>
-      <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">تصميم المواقع</a></li>
-      <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">تطوير الووردبريس</a></li>
-      <li data-icon="star" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">مفضلتي</a></li>
-      <li data-icon="mail" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">القائمة البريدية</a></li>
-      <li data-icon="info" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">إسألني سؤالاً</a></li>
-   </ul>
-
-</div>
-<!-- /panel - End page menu -->
-
-<div role="main" class="ui-content posts">
-
-</div>
-<!-- End of POSTS / UI CONTENT  -->
-</div>
-<!-- End Of main page  -->
-
-
-
-<div class="app_body container-fluid">
-<!-- <div class="hr"></div> -->
-<div class="posts container-fluid">
-
-
-</div><!-- End of about -->
-
-
-</div>
-<!-- End of app body -->
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<!--<script type="text/javascript" src="js/index.js"></script>-->
-<script type="text/javascript">
-            app.initialize();
-        </script>
-
-</body>
-</html>
->>>>>>> origin/master:index.html

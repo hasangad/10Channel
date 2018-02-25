@@ -19,29 +19,100 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
+    this.bindEvents();
     },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
+   
+    
+    
+   bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
+        
+        
+        
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        console.log('Received Device Ready Event');
-        console.log('calling setup push');
-        app.setupPush();
+//alert("Device IS ready");
+//alert( 'We are Testing ' );
+       
+        
+      console.log('Received Device Ready Event');
+      console.log('calling setup push');
+       
+        
+        //app.setupPush();
+        /*---------------------------------------------------------*/
+       /* window.FirebasePlugin.getToken(function(token) {
+  alert(token);
+}, function(error){
+  alert('Error!!!');
+});*/
+      /*  window.FirebasePlugin.getToken(function(token) {
+             alert(token);
+            // save this server-side and use it to push notifications to this device
+            console.log(token);
+        }, function(error) {
+              alert('Error!!!');
+            console.error(error);
+        });
+
+        window.FirebasePlugin.onTokenRefresh(function(token) {
+        // save this server-side and use it to push notifications to this device
+        console.log(token);
+        }, function(error) {
+        console.error(error);
+        });
+
+        window.FirebasePlugin.onNotificationOpen(function(notification) {
+        console.log(notification);
+        }, function(error) {
+        console.error(error);
+        });*/
+        /*---------------------------------------------------------*/
+
+        // SOURCE :: https://forums.adobe.com/thread/2266393
+        // SOURCE 2 :: https://github.com/hasangad/cordova-plugin-fcm
+
+        //FCMPlugin.onTokenRefresh( onTokenRefreshCallback(token) );
+//Note that this callback will be fired everytime a new token is generated, including the first time.
+/*FCMPlugin.onTokenRefresh(function(token){
+    alert( token );
+});
+
+
+        //FCMPlugin.getToken( successCallback(token), errorCallback(err) );
+//Keep in mind the function will return null if the token has not been established yet.
+FCMPlugin.getToken(function(token){
+    alert(token);
+});*/
+
+
+        //FCMPlugin.onNotification( onNotificationCallback(data), successCallback(msg), errorCallback(err) )
+//Here you define your application behaviour based on the notification data.
+/*FCMPlugin.onNotification(function(data){
+    if(data.wasTapped){
+      //Notification was received on device tray and tapped by the user.
+      alert( JSON.stringify(data) );
+    }else{
+      //Notification was received in foreground. Maybe the user needs to be notified.
+      alert( JSON.stringify(data) );
+    }
+});*/
+
+
     },
-    setupPush: function() {
+   /* setupPush: function() {
         console.log('calling push init');
         var push = PushNotification.init({
             "android": {
-                "senderID": "XXXXXXXX"
+                "senderID": "499005818743",
             },
             "browser": {},
             "ios": {
@@ -54,6 +125,8 @@ var app = {
         console.log('after init');
 
         push.on('registration', function(data) {
+          navigator.notification.beep(1);
+
             console.log('registration event: ' + data.registrationId);
 
             var oldRegId = localStorage.getItem('registrationId');
@@ -84,5 +157,5 @@ var app = {
                 'Ok'                  // buttonName
             );
        });
-    }
+    }*/
 };

@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.HasanGadBlog" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.10Channel" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>مدونة حسن جاد التقنية </name>
+    <name>10 قناة</name>
     <description>
-           لا أحب أن أصنف نشاطي على أنني ” شركة رائدة في مجال التصميم – أننا الأفضل – أننا الأكثر إحترافاً – الأعلى مبيعاً – الأكثر شهرة ” صدقاً لا أحب هذه العبارات الرنانة التي لا تعبر عن شخصي ، بكل بساطة أنا مؤسس موقع HASANGAD.com للتصميم والتطوير ، هو موقع شخصي يقدم خدماته في هدوء ويكفيه رضا عملائه عن الخدمات … انتهى بكل بساطة :)
-    </description>
+    قناة 10
+  </description>
     <author email="hasangad.com@gmail.com" href="http://HasanGad.com/blog">
-        Gadency Team
-    </author>
+    Gadency Team
+  </author>
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
@@ -75,6 +75,8 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <preference name="Fullscreen" value="true" />
+    <preference name="BackgroundColor" value="212331" />
+    <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
@@ -89,6 +91,5 @@
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-installLocation" value="auto" />
-    <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenDelay" value="100" />
 </widget>
