@@ -118,6 +118,19 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
+      var url = "https://ten.tv/api/GetPrograms";
+      $.getJSON(url, function(result) {
+        console.log(result);
+        $.each(result, function(i, post) {
+          $(".posts").append('<div class="prog_time"><div class="col-xs-4"> <b>' + post.post.title + '</b> </div><div class="col-xs-5"> <img src="' + post.post.thumb + '" class="img-responsive" /> </div><div class="col-xs-3"> <b>' + post.post
+            .show_time + '</b> <span></span></div> < /div>');
+          /*$("body").append(
+            '<div data-role="page" id="post' + post.post.id + '" class="post_content"><div data-role="header" data-position="fixed" class="post_header"><h2>' + post.post.full_title + '</h2><span class="close_post ui-btn-inner ui-btn-corner-all" aria-hidden="tru' +
+            'e"><span class="ui-btn-text"></span><span class="ui-icon ui-icon-delete ui-icon-shadow"></span></span></div><img src="' + post.post.thumb + '"><span><i class="fa fa-calendar"></i> &nbsp;' + post.post.date + '</span></a><p>' + post.post.content + '<' +
+            '/p></div>'
+          );*/
+        });
+      });
       $(document).ready(function() {
         $('.carousel').carousel({
           interval: 3500
