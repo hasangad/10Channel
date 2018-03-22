@@ -4,11 +4,11 @@
   <description>
     قناة 10
   </description>
-  <author email="hasangad.com@gmail.com" href="http://HasanGad.com/blog">
+  <author email="hasangad.com@gmail.com" href="http://ten.tv">
     Gadency Team
   </author>
   <preference name="BackgroundColor" value="212331"/>
-  <!--<preference name="phonegap-version" value="cli-6.5.0"/>-->
+  <preference name="phonegap-version" value="cli-6.5.0"/>
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="default"/>
   <preference name="target-device" value="universal"/>
@@ -33,15 +33,15 @@
   <plugin name="cordova-plugin-splashscreen"/>
   <plugin spec="https://github.com/hasangad/cordova-plugin-fcm"/>
   <plugin spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
-  <plugin name="phonegap-plugin-push">
+  <!--<plugin name="phonegap-plugin-push">
     <variable name="SENDER_ID" value="499005818743"/>
-  <!--  <platform name="android">
+    <platform name="android">
       <resource-file src="google-services.json" target="google-services.json"/>
-    </platform>-->
+    </platform>
     <platform name="ios">
       <resource-file src="GoogleService-Info.plist"/>
     </platform>
-  </plugin>
+  </plugin>-->
 
   <!--<plugin name="cordova-plugin-firebase" spec="~0.1.24" />-->
   <!--<plugin name="cordova-plugin-fcm" spec="~2.1.2" />-->
