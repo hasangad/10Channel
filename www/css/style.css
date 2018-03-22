@@ -582,6 +582,72 @@ iframe {
   z-index: 99;
 }
 
+.no-padding {
+  padding-left: 0;
+  padding-right: 0
+}
+
+.content p {
+  padding: 20px;
+  color: #ffffff;
+  line-height: 1.8em;
+  font-family: 'droid arabic kufi', tahoma !important;
+}
+
+li.active a {
+  font-weight: 700 !important;
+  color: #009ada !important;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+
+.coming_soon {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.prog {
+  /*margin-bottom: 10px;*/
+}
+
+.prog_time img {
+  height: 120px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.prog_time div:first-child b {
+  display: block;
+  width: 100%;
+  padding-top: 30%;
+  text-align: center;
+  line-height: 1.8em;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.prog_time div:last-child {
+  padding-top: 50px;
+  border-right: 1px solid #777777;
+  padding-bottom: 20px;
+}
+
+.prog_time div:last-child b {
+  color: #ffffff;
+}
+
+.prog_time div:last-child span {
+  position: absolute;
+  top: 49%;
+  height: 2px;
+  width: 20%;
+  right: -20%;
+  border: 1px solid #777777;
+  z-index: -1
+}
+
 /* Folders */
 
 /*# sourceMappingURL=style.css.map */
