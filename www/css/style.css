@@ -651,7 +651,7 @@ li.active a {
   z-index: -1
 }
 
-.prog_time .col-xs-5 { background:url(../images/Spinner.gif) center center no-repeat; min-height:100px;
+.prog_time .col-xs-5 , .main_item { background:url(../images/Spinner.gif) center center no-repeat; min-height:100px;
 background-size: 30% 50%; }
 
 /* Folders */
