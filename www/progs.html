@@ -16,7 +16,7 @@
 
     <!-- CSS -->
 
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />
+  <!--  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />-->
 
     <link rel='stylesheet' id='bootstrap.min-css' href="bs/scss/bootstrap.css" type='text/css' media='all' />
 
@@ -88,7 +88,7 @@
     </div>
 
     <script src="js/jquery.min.js"></script>
-
+    <script src="js/lazyload.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
     <script>
@@ -116,13 +116,15 @@
 			
 			} else { 
 			
-		 $(".posts").append('<a href="http://ten.tv/program_detail/' + data.slug + '" class="prog col-xs-6 no-padding"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /></a>');
+		 $(".posts").append('<a href="http://ten.tv/program_detail/' + data.slug + '" class="prog col-xs-6 no-padding"><div class="main_item_grad"></div><img data-src="' + data.image + '" class="img-responsive" lazyload" width="150" height="120"</a>');
 
 			}
 			
 			$num_is++;
 
         });
+		
+			$("img.lazyload").on().lazyload();
 
       });
 

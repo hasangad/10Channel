@@ -612,10 +612,12 @@ li.active a {
   /*margin-bottom: 10px;*/
 }
 
+.prog_time { height:0 }
+
 .prog_time img {
   height: 120px;
   width: 100%;
-  padding: 15px 0;
+  padding: 0px 0;
 }
 
 .prog_time div:first-child b {
@@ -629,9 +631,10 @@ li.active a {
 }
 
 .prog_time div:last-child {
-  padding-top: 50px;
-  border-right: 1px solid #777777;
-  padding-bottom: 20px;
+ padding-top: 50px;
+    border-right: 1px solid #777777;
+    padding-bottom: 70px;
+    top: 00px;
 }
 
 .prog_time div:last-child b {
@@ -647,6 +650,9 @@ li.active a {
   border: 1px solid #777777;
   z-index: -1
 }
+
+.prog_time .col-xs-5 { background:url(../images/Spinner.gif) center center no-repeat; min-height:100px;
+background-size: 30% 50%; }
 
 /* Folders */
 
