@@ -50,8 +50,8 @@
   <!--<plugin spec="https://myUser:MyPassword@bitbucket.org/prospectum/cordova-plugin-fcm-config.gitMyPassword@bitbucket.org/prospectum/cordova-plugin-fcm-config.git" source="git" />-->
   <!--<plugin name="cordova-plugin-firebase" spec="~0.1.19"/>-->
   <!--<resource-file src="GoogleService-Info.plist" target="GoogleService-Info.plist" />-->
-  <plugin name="cordova-plugin-vibration"/>
-  <!--<plugin name="cordova-plugin-hidden-statusbar-overlay" />-->
+ <!-- <plugin name="cordova-plugin-vibration"/>
+  <plugin name="cordova-plugin-hidden-statusbar-overlay" />-->
   <icon src="icon.png"/>
   <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png"/>
   <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png"/>
@@ -110,7 +110,7 @@
   <splash height="1242" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2208"/>
   <splash height="640" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="1136"/>
   <splash height="1536" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2048"/>
-  <preference name="SplashScreenDelay" value="100"/>
+  <preference name="SplashScreenDelay" value="1500"/>
   <access origin="*"/>
   <plugin name="cordova-plugin-whitelist" version="1"/>
   <allow-intent href="http://*/*"/>
