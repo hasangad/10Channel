@@ -35,7 +35,7 @@ p {
   font-size: small;
 }
 
-body, .ui-page-theme-a .ui-panel-wrapper {
+body, .ui-page-theme-a .ui-panel-wrapper, .ui-page {
   background: #212331;
   font-family: 'droid arabic kufi', tahoma !important;
 }
@@ -333,10 +333,8 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   font-weight: 400;
 }
 
-.posts {
-  padding: 0;
-  z-index: :0
-  /*background-color: #523905;*/
+.no-padding {
+  padding: 0 !important;
 }
 
 .hr {
@@ -594,7 +592,11 @@ iframe {
   font-family: 'droid arabic kufi', tahoma !important;
 }
 
-li.active a {
+.ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
+  color: #ffffff;
+}
+
+li.active a, li a.active {
   font-weight: 700 !important;
   color: #009ada !important;
 }
@@ -612,7 +614,9 @@ li.active a {
   /*margin-bottom: 10px;*/
 }
 
-.prog_time { height:0 }
+.prog_time {
+  height: 0
+}
 
 .prog_time img {
   height: 120px;
@@ -631,10 +635,10 @@ li.active a {
 }
 
 .prog_time div:last-child {
- padding-top: 50px;
-    border-right: 1px solid #777777;
-    padding-bottom: 70px;
-    top: 00px;
+  padding-top: 50px;
+  border-right: 1px solid #777777;
+  padding-bottom: 70px;
+  top: 00px;
 }
 
 .prog_time div:last-child b {
@@ -651,8 +655,11 @@ li.active a {
   z-index: -1
 }
 
-.prog_time .col-xs-5 , .main_item { background:url(../images/Spinner.gif) center center no-repeat; min-height:100px;
-background-size: 30% 50%; }
+.prog_time .col-xs-5, .main_item {
+  background: url(../images/Spinner.gif) center center no-repeat;
+  min-height: 100px;
+  background-size: 30% 50%;
+}
 
 /* Folders */
 

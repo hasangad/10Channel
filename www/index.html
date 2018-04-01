@@ -7,7 +7,7 @@
     <!--<base href="https://hasangad.com/">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="js/jquery.mobile-1.4.0.min.css" />
     <link rel='stylesheet' id='bootstrap.min-css' href="bs/scss/bootstrap.css" type='text/css' media='all' />
     <link rel='stylesheet' id='bootstrap.min-css-rtl' href='bs/scss/bootstrap-rtl.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='css-style' href='css/style.css' type='text/css' media='all' />
@@ -15,87 +15,272 @@
 
   <body class="container-fluid no-padding">
     <div class="preloader"></div>
-    <div data-role="page" id="main_page">
-      <!-- Start page header -->
+    <!-- Start page header -->
+    <div data-role="page" id="main_page" data-position="right" data-display="push">
       <div data-role="header" data-position="fixed" class="header">
         <div class="table-responsive">
           <ul>
-            <li class="active"> <a href="index.html">
+            <li> <a href="#main_page" data-transition="slide" data-direction="reverse">
               الرئيسية
             </a> </li>
-            <li> <a href="progs.html">
+            <li> <a href="#progs" data-transition="slide" data-direction="reverse">
               البرامج
             </a> </li>
-            <li> <a href="schedule.html">
+            <li> <a href="#schedule" data-transition="slide" data-direction="reverse">
               مواعيد البث
             </a> </li>
-            <li> <a href="about.html">
+            <li> <a href="#about" data-transition="slide" data-direction="reverse">
               عن القناة
             </a> </li>
-            <li> <a href="live.html">
+            <li> <a href="#live" data-transition="slide" data-direction="reverse">
               البث المباشر
             </a> </li>
           </ul>
         </div>
       </div>
       <!-- End page header -->
-      <div role="main" class="ui-content posts">
+      <div role="main" class="ui-content posts no-padding">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner" role="listbox">
-            <!--<div class="carousel-item">
-              <a href="#" class="main_item">
-                <div class="main_item_grad"></div> <img src="images/main-1.jpg" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg">
-                <div class="ten_logo_onfly_text"> <span>يومياً في
-                  </span>
-                  <h2>7:30 مساءً</h2> <small>
-                    بتوقيت القاهرة
-                  </small> </div>
-              </a>
-            </div>--></div> <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <div class="carousel-inner" role="listbox"> </div> <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a> <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-          </a> </div>
+          </a></div>
         <title class="main_title">قريباً على شاشتنا</title> <a href="#" class="coming_soon">
 <img src="images/1.jpg" class="img-responsive" />
         </a> <a href="#" class="coming_soon">
 <img src="images/2.jpg" class="img-responsive" />
         </a> </div>
-      <!-- End of POSTS / UI CONTENT -->
+      <div data-role="footer"> </div>
+      <!-- /footer -->
     </div>
-    <!-- Start About Page -->
-    <!-- End of About page -->
-    <!-- End Of main page -->
+    <!-- End of POSTS / UI CONTENT -->
+    <div data-role="page" id="progs" data-position="right" data-display="push">
+      <div data-role="header" data-position="fixed" class="header">
+        <div class="table-responsive">
+          <ul>
+            <li> <a href="#main_page" data-transition="slide" data-direction="reverse">
+              الرئيسية
+            </a> </li>
+            <li> <a href="#progs" data-transition="slide" data-direction="reverse">
+              البرامج
+            </a> </li>
+            <li> <a href="#schedule" data-transition="slide" data-direction="reverse">
+              مواعيد البث
+            </a> </li>
+            <li> <a href="#about" data-transition="slide" data-direction="reverse">
+              عن القناة
+            </a> </li>
+            <li> <a href="#live" data-transition="slide" data-direction="reverse">
+              البث المباشر
+            </a> </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End page header -->
+      <div role="main" class="ui-content progs no-padding"> </div>
+      <div data-role="footer"> </div>
+      <!-- /footer -->
+    </div>
+    <div data-role="page" id="single_prog" data-position="right" data-display="push">
+      <div data-role="header" data-position="fixed" class="header">
+        <div class="table-responsive">
+          <ul>
+            <li> <a href="#main_page" data-transition="slide" data-direction="reverse">
+              الرئيسية
+            </a> </li>
+            <li> <a href="#progs" data-transition="slide" data-direction="reverse">
+              البرامج
+            </a> </li>
+            <li> <a href="#schedule" data-transition="slide" data-direction="reverse">
+              مواعيد البث
+            </a> </li>
+            <li> <a href="#about" data-transition="slide" data-direction="reverse">
+              عن القناة
+            </a> </li>
+            <li> <a href="#live" data-transition="slide" data-direction="reverse">
+              البث المباشر
+            </a> </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End page header -->
+      <div role="main" class="ui-content single_prog no-padding"> </div>
+      <div data-role="footer"> </div>
+      <!-- /footer -->
+    </div>
+    <div data-role="page" id="schedule" data-position="right" data-display="push">
+      <div data-role="header" data-position="fixed" class="header">
+        <div class="table-responsive">
+          <ul>
+            <li> <a href="#main_page" data-transition="slide" data-direction="reverse">
+              الرئيسية
+            </a> </li>
+            <li> <a href="#progs" data-transition="slide" data-direction="reverse">
+              البرامج
+            </a> </li>
+            <li> <a href="#schedule" data-transition="slide" data-direction="reverse">
+              مواعيد البث
+            </a> </li>
+            <li> <a href="#about" data-transition="slide" data-direction="reverse">
+              عن القناة
+            </a> </li>
+            <li> <a href="#live" data-transition="slide" data-direction="reverse">
+              البث المباشر
+            </a> </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End page header -->
+      <div role="main" class="ui-content schedule no-padding"> </div>
+      <div data-role="footer"> </div>
+      <!-- /footer -->
+    </div>
+    <div data-role="page" id="about" data-position="right" data-display="push">
+      <div data-role="header" data-position="fixed" class="header">
+        <div class="table-responsive">
+          <ul>
+            <li> <a href="#main_page" data-transition="slide" data-direction="reverse">
+              الرئيسية
+            </a> </li>
+            <li> <a href="#progs" data-transition="slide" data-direction="reverse">
+              البرامج
+            </a> </li>
+            <li> <a href="#schedule" data-transition="slide" data-direction="reverse">
+              مواعيد البث
+            </a> </li>
+            <li> <a href="#about" data-transition="slide" data-direction="reverse">
+              عن القناة
+            </a> </li>
+            <li> <a href="#live" data-transition="slide" data-direction="reverse">
+              البث المباشر
+            </a> </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End page header -->
+      <div role="main" class="ui-content about no-padding"> <img src="images/logo.jpg" class="img-responsive" />
+        <title class="main_title"> شبكة قناة التحرير للأنتاج الفني و القنوات الفضائية </title>
+        <p> ان كان الأجل بلديهما, معزّزة واشتدّت بـ تحت. و ترتيب احداث الحكومة تعد, لها أصقاع بالجانب أي, فقد الأحمر لتقليعة بـ. العناد انتصارهم إذ غير, قد تلك اعتداء تحرّكت الشتوية. فرنسا قُدُماً أم مدن, دول كُلفة الإقتصادي لم. عدد عن اليابان باستحداث, ضرب
+          ثم ترتيب ديسمبر والفلبي نمكن كرسي الدول عملية إذ, عملية الأسيوي الأثنان ان شيء. كلّ عسكرياً البولندي التكاليف بـ, تم بلا عرفها الأسيوي. لكون بتطويق وتنصيب عن ولم. وحتى الإكتفاء أم عرض, عل حدى الحكم بالرّد.. هنالك العديد من الأنواع المتوفرة لنصوص
+          لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما تعمل
+          بعض مولّدات نصوص لوريم إيبسوم على الإنترنت على إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه </p>
+      </div>
+      <div data-role="footer"> </div>
+      <!-- /footer -->
+    </div>
+    <div data-role="page" id="live" data-position="right" data-display="push">
+      <div data-role="header" data-position="fixed" class="header">
+        <div class="table-responsive">
+          <ul>
+            <li> <a href="#main_page" data-transition="slide" data-direction="reverse">
+              الرئيسية
+            </a> </li>
+            <li> <a href="#progs" data-transition="slide" data-direction="reverse">
+              البرامج
+            </a> </li>
+            <li> <a href="#schedule" data-transition="slide" data-direction="reverse">
+              مواعيد البث
+            </a> </li>
+            <li> <a href="#about" data-transition="slide" data-direction="reverse">
+              عن القناة
+            </a> </li>
+            <li> <a href="#live" data-transition="slide" data-direction="reverse">
+              البث المباشر
+            </a> </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End page header -->
+      <div role="main" class="ui-content live no-padding"> </div>
+      <div data-role="footer"> </div>
+      <!-- /footer -->
+    </div>
+    </div>
     <script src="js/jquery.min.js"></script>
+    <script src="js/imgcache.js"></script>
+    <script src="js/jquery.mobile-1.4.0.min.js"></script>
+    <script src="js/lazyload.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
+      // Script -- Index
       //http://ten.tv/api/GetMainpagePrograms
       var url = "http://ten.tv/api/GetMainpagePrograms";
       $.getJSON(url, function(result) {
         console.log(result);
         //alert(result);
         $num_is = 0;
-        $.each(result.data, function(i, data) {
+        $.each(result, function(i, data) {
+          //alert($num_is);
+          //alert(data.show_at);
           if (data.image == null) {
             data.image = "http://via.placeholder.com/150x200";
           }
           if ($num_is == 0) {
-            //alert($num_is);
-            $(".carousel-inner").append('<div class="carousel-item active"><a href="#" class="main_item"><div class="main_item_grad"></div> <img src="' + data.image +
+            $(".carousel-inner").append('<div class="carousel-item active"><a href="' + data.url + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image +
               '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg"><div class="ten_logo_onfly_text"> <span>يعرض الآن</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
             //$(".posts").append('<a href="#" class="main_item"><div class="main_item_grad"></div><img data-src="' + data.image + '" class="img-responsive lazyload" ></a>');
           } else {
-            $(".carousel-inner").append(
-              '<div class="carousel-item"><a href="#" class="main_item"><div class="main_item_grad"></div> <img src="images/main-1.jpg" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg"><div class="ten_logo_onfly_text"> <span>يعرض الآن</span><h2>' +
-              data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+            $(".carousel-inner").append('<div class="carousel-item"><a href="' + data.url + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image +
+              '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg"><div class="ten_logo_onfly_text"> <span>يعرض الآن</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
           }
           $num_is++;
         });
         $("img.lazyload").on().lazyload();
       });
+      // Script - progs
+      var url = "https://ten.tv/api/GetPrograms";
+      $.getJSON(url, function(result) {
+        console.log(result);
+        //alert(result);
+        $num_is2 = 0;
+        $.each(result.data, function(i, data) {
+          if (data.image == null) {
+            data.image = "http://via.placeholder.com/150x200";
+          }
+          if ($num_is2 == 0) {
+            //alert($num_is);
+            $(".progs").append('<a href="#single_prog?name=' + data.slug + '" class="main_item"><div class="main_item_grad"></div><img data-src="' + data.image + '" class="img-responsive lazyload" ></a>');
+          } else {
+            $(".progs").append('<a href="http://ten.tv/program_detail/' + data.slug + '" class="prog col-xs-6 no-padding"><div class="main_item_grad"></div><img data-src="' + data.image + '" class="img-responsive lazyload"></a>');
+          }
+          $num_is2++;
+        });
+        $("img.lazyload").on().lazyload();
+      });
+      // script - schedule
+      var url = "https://ten.tv/api/GetShowSchedule";
+      $.getJSON(url, function(result) {
+        console.log(result);
+        //alert(result);
+        $.each(result.show, function(i, data) {
+          if (data.image == null) {
+            data.image = "http://via.placeholder.com/150x200";
+          }
+          $(".schedule").append('<div class="prog_time"><div class="col-xs-4"> <b>' + data.title + '</b> </div><div class="col-xs-5"> <img data-src="' + data.image + '" class="img-responsive lazyload"> </div><div class="col-xs-3"> <b>' +
+            data.time + '</b> <span></span></div> </div>');
+        });
+        $("img.lazyload").on().lazyload();
+      });
       $(document).ready(function() {
+        var target = $('img');
+        ImgCache.isCached(target.attr('src'), function(path, success) {
+          if (success) {
+            // already cached
+            ImgCache.useCachedFile(target);
+          } else {
+            // not there, need to cache the image
+            ImgCache.cacheFile(target.attr('src'), function() {
+              ImgCache.useCachedFile(target);
+            });
+          }
+        });
+        $('.ui-link').click(function() {
+          $('.ui-link').removeClass('active');
+          $(this).addClass('active');
+        });
         //  alert('JQuery is fine');
         $('.carousel').carousel({
           interval: 3500
@@ -108,11 +293,30 @@
             allowPageScroll: "vertical"
           });*/
         $(".preloader").fadeOut(500);
+        // SOURCE :: https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+        function getParameterByName(name, url) {
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, "\\$&");
+          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+        // query string: ?foo=lorem&bar=&baz
+        var foo = getParameterByName('foo'); // "lorem"
+        //var bar = getParameterByName('bar'); // "" (present with empty value)
+        //  var baz = getParameterByName('baz'); // "" (present with no value)
+        //var qux = getParameterByName('qux'); // null (absent)
+        //alert(foo);
+        $(".progs a").click(function() {
+          var boo = getParameterByName('name');
+          alert(boo);
+        });
       });
 
     </script>
     <script type="text/javascript" src="cordova.js"></script>
-    <script src="js/lazyload.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
       app.initialize();
