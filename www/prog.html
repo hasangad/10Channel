@@ -77,10 +77,19 @@
         var url = "https://ten.tv/api/GetProgramDetails?id=" + prog_name;
         $.getJSON(url, function(data) {
           //console.log(result);
-          alert(data['program'].title);
+          if (data['program'].image == null) {
+            data['program'].image = "http://via.placeholder.com/150x200";
+          }
+          $program_name = data['program'].title;
+          $(".prog").append('<h1 class="main_title">' + $program_name + '</h1><img data-src="' + data['program'].image + '" class="img-responsive lazyload" />');
+          $(".prog").append('<h2 class="main_title">الحلقات</h1>');
           $num_is = 0;
           $.each(data['episodes'].data, function(i2, data2) {
-            alert(data2.title);
+            if (data2.image == null) {
+              data2.image = "http://via.placeholder.com/150x200";
+            }
+            $e_title = data2.title;
+            $(".prog").append('<div class="prog col-xs-6 no-padding"><div class="main_item_grad"></div><img data-src="' + data2.image + '" class="img-responsive lazyload" /></div>');
           });
           $("img.lazyload").on().lazyload();
         });

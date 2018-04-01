@@ -69,7 +69,7 @@
             //alert($num_is);
             $(".posts").append('<a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img data-src="' + data.image + '" class="img-responsive lazyload" ></a>');
           } else {
-            $(".posts").append('<a href="http://ten.tv/program_detail/' + data.slug + '" class="prog col-xs-6 no-padding"><div class="main_item_grad"></div><img data-src="' + data.image + '" class="img-responsive lazyload"></a>');
+            $(".posts").append('<a href="prog.html?name=' + data.id + '" class="prog col-xs-6 no-padding"><div class="main_item_grad"></div><img data-src="' + data.image + '" class="img-responsive lazyload"></a>');
           }
           $num_is++;
         });

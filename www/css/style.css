@@ -669,6 +669,10 @@ li.active a, li a.active {
   background-size: 30% 50%;
 }
 
+.prog_time .col-xs-5 img, .main_item img {
+  background-color: #4c4f63
+}
+
 /* Folders */
 
 /*# sourceMappingURL=style.css.map */

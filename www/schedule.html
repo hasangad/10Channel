@@ -88,8 +88,8 @@
           if (data.image == null) {
             data.image = "http://via.placeholder.com/150x200";
           }
-          $(".posts").append('<div class="prog_time"><div class="col-xs-4"> <b>' + data.title + '</b> </div><div class="col-xs-5"> <img data-src="' + data.image + '" class="img-responsive lazyload"> </div><div class="col-xs-3"> <b>' + data.time +
-            '</b> <span></span></div> </div>');
+          $(".posts").append('<div class="prog_time"><div class="col-xs-4"> <b>' + data.title + '</b> </div><div class="col-xs-5"> <img data-src="' + data.image + '" class="img-responsive lazyload"></div><div class="col-xs-3"> <b>' + data.time +
+            '</b><span></span></div></div>');
         });
         $("img.lazyload").on().lazyload();
       });
