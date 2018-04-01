@@ -92,21 +92,30 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-      /*  var url = "https://hasangad.com/blog-posts-api/";
-                                                                                                                             $.getJSON(url, function(result) {
-                                                                                                                                  console.log(result);
-                                                                                                                                  $.each(result, function(i, post) {
-                                                                                                                                     $("#main_page .posts").append(
-                                                                                                                                      '<div class="col-xs-6 post_area"><a href="#post' + post.post.id + '" data-rel="dialog" data-transition="slideup"><img src="' + post.post.thumb + '"><h2>' + post.post.title + '</h2><span><i class="fa fa-calendar"></i> &nbsp;' + post.post.date + '</sp' +
-                                                                                                                                      'an></a></div>'
-                                                                                                                                    );
-                                                                                                                                    $("body").append(
-                                                                                                                                      '<div data-role="page" id="post' + post.post.id + '" class="post_content"><div data-role="header" data-position="fixed" class="post_header"><h2>' + post.post.full_title + '</h2><span class="close_post ui-btn-inner ui-btn-corner-all" aria-hidden="tru' +
-                                                                                                                                      'e"><span class="ui-btn-text"></span><span class="ui-icon ui-icon-delete ui-icon-shadow"></span></span></div><img src="' + post.post.thumb + '"><span><i class="fa fa-calendar"></i> &nbsp;' + post.post.date + '</span></a><p>' + post.post.content + '<' +
-                                                                                                                                      '/p></div>'
-                                                                                                                                    );
-                                                                                                                                  });
-                                                                                                                                });*/
+      //http://ten.tv/api/GetMainpagePrograms
+      var url = "http://ten.tv/api/GetMainpagePrograms";
+      $.getJSON(url, function(result) {
+        console.log(result);
+        //alert(result);
+        $num_is = 0;
+        $.each(result.data, function(i, data) {
+          if (data.image == null) {
+            data.image = "http://via.placeholder.com/150x200";
+          }
+          if ($num_is == 0) {
+            //alert($num_is);
+            $(".carousel-inner").append('<div class="carousel-item active"><a href="#" class="main_item"><div class="main_item_grad"></div> <img src="' + data.image +
+              '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg"><div class="ten_logo_onfly_text"> <span>يعرض الآن</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+            //$(".posts").append('<a href="#" class="main_item"><div class="main_item_grad"></div><img data-src="' + data.image + '" class="img-responsive lazyload" ></a>');
+          } else {
+            $(".carousel-inner").append(
+              '<div class="carousel-item"><a href="#" class="main_item"><div class="main_item_grad"></div> <img src="images/main-1.jpg" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg"><div class="ten_logo_onfly_text"> <span>يعرض الآن</span><h2>' +
+              data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+          }
+          $num_is++;
+        });
+        $("img.lazyload").on().lazyload();
+      });
       $(document).ready(function() {
         //  alert('JQuery is fine');
         $('.carousel').carousel({
@@ -124,6 +133,7 @@
 
     </script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/lazyload.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
       app.initialize();
