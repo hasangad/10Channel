@@ -278,7 +278,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 
 .main_item img {
   width: 100%;
-  min-height: 73vh;
+  min-height: 55vh;
 }
 
 .header .bars_icon {
@@ -333,7 +333,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   font-weight: 400;
 }
 
-.no-padding {
+.no-padding, .ui-content {
   padding: 0 !important;
 }
 
@@ -612,6 +612,14 @@ li.active a, li a.active {
 
 .prog {
   /*margin-bottom: 10px;*/
+  overflow: hidden;
+  ;
+}
+
+.prog img {
+  min-height: 170px;
+  display: block;
+  width: 100%;
 }
 
 .prog_time {

@@ -7,7 +7,7 @@
     <!--<base href="https://hasangad.com/">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
-    <!--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />-->
+    <!--  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />-->
     <link rel='stylesheet' id='bootstrap.min-css' href="bs/scss/bootstrap.css" type='text/css' media='all' />
     <link rel='stylesheet' id='bootstrap.min-css-rtl' href='bs/scss/bootstrap-rtl.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='css-style' href='css/style.css' type='text/css' media='all' />
@@ -15,95 +15,47 @@
 
   <body class="container-fluid no-padding ">
     <div class="preloader"></div>
-    <div data-role="page" id="about">
+    <div data-role="page" id="progs">
       <!-- Start page header -->
       <div data-role="header" data-position="fixed" class="header">
         <div class="table-responsive">
           <ul>
             <li> <a href="index.html">
 
-
-
               الرئيسية
 
-
-
             </a> </li>
-            <li> <a href="progs.html">
-
-
+            <li class="active"> <a href="progs.html">
 
               البرامج
 
-
-
             </a> </li>
-            <li class="active"><a href="schedule.html">
-
-
+            <li> <a href="schedule.html">
 
               مواعيد البث
-
-
 
             </a> </li>
             <li> <a href="about.html">
 
-
-
               عن القناة
-
-
 
             </a> </li>
             <li> <a href="live.html">
 
-
-
               البث المباشر
-
-
 
             </a> </li>
           </ul>
         </div>
       </div>
       <!-- End page header -->
-      <div role="schedule" class="ui-content posts content"> </div>
-      <div class="prog_time">
-        <div class="col-xs-4"> <b>الفيلم العربي</b> </div>
-        <div class="col-xs-5"> <img data-src="https://ten.tv/storage/141/.jpg" class="img-responsive lazyload" width="150" height="120"> </div>
-        <div class="col-xs-3"> <b>23:30</b> <span></span></div> &lt; /div&gt;</div>
+      <div role="progs" class="ui-content prog content"> </div>
       <!-- End of POSTS / UI CONTENT -->
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/lazyload.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-      var url = "https://ten.tv/api/GetShowSchedule";
-      $.getJSON(url, function(result) {
-        console.log(result);
-        //alert(result);
-        $.each(result.show, function(i, data) {
-          if (data.image == null) {
-            data.image = "http://via.placeholder.com/150x200";
-          }
-          $(".posts").append('<div class="prog_time"><div class="col-xs-4"> <b>' + data.title + '</b> </div><div class="col-xs-5"> <img data-src="' + data.image + '" class="img-responsive lazyload"> </div><div class="col-xs-3"> <b>' + data.time +
-            '</b> <span></span></div> </div>');
-        });
-        $("img.lazyload").on().lazyload();
-      });
-      /* $(document).on('click', '.remove-MOH-attached-file', function () {
-
-      alert("I like it ");
-
-      });*/
-      /*$( window ).on( "load", function() {
-
-				$("img.lazyload").on().lazyload();
-
-
-	});*/
       $(document).ready(function() {
         $('.carousel').carousel({
           interval: 3500
@@ -120,11 +72,34 @@
           return decodeURIComponent(results[2].replace(/\+/g, " "));
         }
         // query string: ?foo=lorem&bar=&baz
-        var foo = getParameterByName('foo'); // "lorem"
-        //var bar = getParameterByName('bar'); // "" (present with empty value)
-        //  var baz = getParameterByName('baz'); // "" (present with no value)
-        //var qux = getParameterByName('qux'); // null (absent)
-        //alert(foo);
+        var prog_name = getParameterByName('name'); // "lorem"
+        //alert(prog_name);
+        var url = "https://ten.tv/api/GetProgramDetails?id=" + prog_name;
+        $.getJSON(url, function(result) {
+          console.log(result);
+          //alert(result);
+          $num_is = 0;
+          $.each(result, function(i1, object) {
+            //alert(object);
+            $.each(object.program, function(i2, data) {
+              alert(data);
+            });
+          });
+          /*  $.each(result.data, function(i, data) {
+              alert(data.title);
+              //if (data.image == null) {
+              //  data.image = "http://via.placeholder.com/150x200";
+            //  }
+              if ($num_is == 0) {
+                //alert($num_is);
+                $(".prog").append('<h1 class="title">"' + data.title + '"</h1><img data-src= + data.image + class="img-responsive lazyload">');
+              } else {
+                //$(".prog").append('<img data-src="' + data.image + '" class="img-responsive lazyload">');
+              }
+              $num_is++;
+            });*/
+          $("img.lazyload").on().lazyload();
+        });
       });
 
     </script>
