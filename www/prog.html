@@ -75,29 +75,13 @@
         var prog_name = getParameterByName('name'); // "lorem"
         //alert(prog_name);
         var url = "https://ten.tv/api/GetProgramDetails?id=" + prog_name;
-        $.getJSON(url, function(result) {
-          console.log(result);
-          //alert(result);
+        $.getJSON(url, function(data) {
+          //console.log(result);
+          alert(data['program'].title);
           $num_is = 0;
-          $.each(result, function(i1, object) {
-            //alert(object);
-            $.each(object.program, function(i2, data) {
-              alert(data);
-            });
+          $.each(data['episodes'].data, function(i2, data2) {
+            alert(data2.title);
           });
-          /*  $.each(result.data, function(i, data) {
-              alert(data.title);
-              //if (data.image == null) {
-              //  data.image = "http://via.placeholder.com/150x200";
-            //  }
-              if ($num_is == 0) {
-                //alert($num_is);
-                $(".prog").append('<h1 class="title">"' + data.title + '"</h1><img data-src= + data.image + class="img-responsive lazyload">');
-              } else {
-                //$(".prog").append('<img data-src="' + data.image + '" class="img-responsive lazyload">');
-              }
-              $num_is++;
-            });*/
           $("img.lazyload").on().lazyload();
         });
       });
