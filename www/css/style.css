@@ -569,7 +569,7 @@ iframe {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: #ffffff url(../images/Spinner.gif) center center no-repeat;
   z-index: 999999;
 }
 

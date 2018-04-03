@@ -7,7 +7,7 @@
     <!--<base href="https://hasangad.com/">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
-    <!--  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />-->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />
     <link rel='stylesheet' id='bootstrap.min-css' href="bs/scss/bootstrap.css" type='text/css' media='all' />
     <link rel='stylesheet' id='bootstrap.min-css-rtl' href='bs/scss/bootstrap-rtl.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='css-style' href='css/style.css' type='text/css' media='all' />
@@ -15,67 +15,41 @@
 
   <body class="container-fluid no-padding ">
     <div class="preloader"></div>
-    <div data-role="page" id="progs">
+    <div data-role="page" id="about">
       <!-- Start page header -->
       <div data-role="header" data-position="fixed" class="header">
         <div class="table-responsive">
           <ul>
             <li> <a href="index.html">
-
               الرئيسية
-
             </a> </li>
-            <li class="active"> <a href="progs.html">
-
+            <li> <a href="progs.html">
               البرامج
-
             </a> </li>
             <li> <a href="schedule.html">
-
               مواعيد البث
-
             </a> </li>
             <li> <a href="about.html">
-
               عن القناة
-
             </a> </li>
-            <li> <a href="live.html">
-
+            <li class="active"> <a href="live.html">
               البث المباشر
-
             </a> </li>
           </ul>
         </div>
       </div>
       <!-- End page header -->
-      <div role="progs" class="ui-content posts content"> </div>
+      <div role="about" class="ui-content posts content">
+        <h3 class="main_title">البث المباشر</h3><br><iframe width="560" height="315" src="https://www.youtube.com/embed/tdMw9L2MflY?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" style="width:100%; height:auto; min-height:50vh;" allowfullscreen></iframe> </div>
       <!-- End of POSTS / UI CONTENT -->
     </div>
     <script src="js/jquery.min.js"></script>
-    <script src="js/lazyload.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-      var url = "https://ten.tv/api/GetPrograms";
-      $.getJSON(url, function(result) {
-        console.log(result);
-        //alert(result);
-        $num_is = 0;
-        $.each(result.data, function(i, data) {
-          if (data.image == null) {
-            data.image = "http://via.placeholder.com/150x200";
-          }
-          if ($num_is == 0) {
-            //alert($num_is);
-            $(".posts").append('<a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /></a>');
-          } else {
-            $(".posts").append('<a href="prog.html?name=' + data.id + '" class="prog col-xs-6 no-padding"><div class="main_item_grad"></div><img data-src="' + data.image + '" class="img-responsive lazyload"/></a>');
-          }
-          $num_is++;
-        });
-        $("img.lazyload").on().lazyload();
-      });
       $(document).ready(function() {
+        $('.carousel').carousel({
+          interval: 3500
+        })
         $(".preloader").fadeOut(1500);
       });
 
