@@ -55,66 +55,31 @@
         </a> </div>
       <!-- End of POSTS / UI CONTENT -->
     </div>
-    <!-- Start About Page -->
-    <!-- End of About page -->
     <!-- End Of main page -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.mobile-1.4.5.js"></script>
+    <!--<script src="js/jquery.mobile-1.4.5.js"></script>-->
     <script src="js/lazyload.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-      // Script -- Index
-      //http://ten.tv/api/GetMainpagePrograms
-      var url = "http://ten.tv/api/GetMainpagePrograms";
-      $.getJSON(url, function(result) {
-        console.log(result);
-        //alert(result);
-        $num_is = 0;
-        $.each(result, function(i, data) {
-          //alert($num_is);
-          //alert(data.show_at);
-          if (data.image == null) {
-            data.image = "http://via.placeholder.com/150x200";
-          }
-          if ($num_is == 0) {
-            $(".carousel-inner").append('<div class="carousel-item active"><a href="' + data.url + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image +
-              '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg"><div class="ten_logo_onfly_text"> <span>يعرض الآن</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
-          } else if ($num_is == 1) {
-            $(".carousel-inner").append('<div class="carousel-item"><a href="' + data.url + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image +
-              '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg"><div class="ten_logo_onfly_text"> <span>التالي</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
-          } else if ($num_is == 2) {
-            $(".carousel-inner").append('<div class="carousel-item"><a href="' + data.url + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image +
-              '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg"><div class="ten_logo_onfly_text"> <span>لاحقاً</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
-          } else {
-            /*  $(".carousel-inner").append('<div class="carousel-item"><a href="' + data.url + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image +
-                '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg"><div class="ten_logo_onfly_text"> <span>يعرض الآن</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');*/
-          }
-          $num_is++;
-        });
-        $("img.lazyload").on().lazyload();
-      });
-      $(document).ready(function() {
-        //  alert('JQuery is fine');
-        $('.carousel').carousel({
-          interval: 3500
-        })
-        /*  $(".carousel").swipe({
-            swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-              if (direction == 'left') $(this).carousel('next');
-              if (direction == 'right') $(this).carousel('prev');
-            },
-            allowPageScroll: "vertical"
-          });*/
-        $(".preloader").fadeOut(500);
-      });
-
-    </script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
+      $(document).ready(function() {
+        GetMainpagePrograms();
+        $('.carousel').carousel({
+          interval: 3500
+        })
+      })
+      /*  $(".carousel").swipe({
+          swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+            if (direction == 'left') $(this).carousel('next');
+            if (direction == 'right') $(this).carousel('prev');
+          },
+          allowPageScroll: "vertical"
+        });*/
       app.initialize();
 
     </script>
+    <script type="text/javascript" src="js/func_js.js"></script>
   </body>
 
 </html>

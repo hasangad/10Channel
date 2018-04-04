@@ -69,68 +69,19 @@
         </div>
       </div>
       <!-- End page header -->
-      <div role="schedule" class="ui-content posts content"> </div>
-      <div class="prog_time">
-        <div class="col-xs-4"> <b>الفيلم العربي</b> </div>
-        <div class="col-xs-5"> <img data-src="https://ten.tv/storage/141/.jpg" class="img-responsive lazyload" width="150" height="120"> </div>
-        <div class="col-xs-3"> <b>23:30</b> <span></span></div> &lt; /div&gt;</div>
+      <div role="schedule" class="ui-content posts schedule content"> </div>
       <!-- End of POSTS / UI CONTENT -->
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/lazyload.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-      var url = "https://ten.tv/api/GetShowSchedule";
-      $.getJSON(url, function(result) {
-        console.log(result);
-        //alert(result);
-        $.each(result.show, function(i, data) {
-          if (data.image == null) {
-            data.image = "http://via.placeholder.com/150x200";
-          }
-          $(".posts").append('<div class="prog_time"><div class="col-xs-4"> <b>' + data.title + '</b> </div><div class="col-xs-5"> <img data-src="' + data.image + '" class="img-responsive lazyload"></div><div class="col-xs-3"> <b>' + data.time +
-            '</b><span></span></div></div>');
-        });
-        $("img.lazyload").on().lazyload();
-      });
-      /* $(document).on('click', '.remove-MOH-attached-file', function () {
-
-      alert("I like it ");
-
-      });*/
-      /*$( window ).on( "load", function() {
-
-				$("img.lazyload").on().lazyload();
-
-
-	});*/
-      $(document).ready(function() {
-        $('.carousel').carousel({
-          interval: 3500
-        })
-        $(".preloader").fadeOut(500);
-        // SOURCE :: https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
-        function getParameterByName(name, url) {
-          if (!url) url = window.location.href;
-          name = name.replace(/[\[\]]/g, "\\$&");
-          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-          if (!results) return null;
-          if (!results[2]) return '';
-          return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-        // query string: ?foo=lorem&bar=&baz
-        var foo = getParameterByName('foo'); // "lorem"
-        //var bar = getParameterByName('bar'); // "" (present with empty value)
-        //  var baz = getParameterByName('baz'); // "" (present with no value)
-        //var qux = getParameterByName('qux'); // null (absent)
-        //alert(foo);
-      });
-
-    </script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/func_js.js"></script>
     <script type="text/javascript">
+      $(document).ready(function() {
+        Get_Schedule();
+      });
       app.initialize();
 
     </script>

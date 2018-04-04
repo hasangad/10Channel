@@ -54,61 +54,14 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/lazyload.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $('.carousel').carousel({
-          interval: 3500
-        })
-        $(".preloader").fadeOut(1000);
-        // SOURCE :: https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
-        function getParameterByName(name, url) {
-          if (!url) url = window.location.href;
-          name = name.replace(/[\[\]]/g, "\\$&");
-          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-          if (!results) return null;
-          if (!results[2]) return '';
-          return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-        // query string: ?foo=lorem&bar=&baz
-        var prog_name = getParameterByName('name'); // "lorem"
-        //alert(prog_name);
-        var url = "https://ten.tv/api/GetProgramDetails?id=" + prog_name;
-        $.getJSON(url, function(data) {
-          //console.log(result);
-          if (data['program'].image == null) {
-            data['program'].image = "http://via.placeholder.com/150x200";
-          }
-          $program_name = data['program'].title;
-          $(".prog").append('<h1 class="main_title">' + $program_name + '</h1><img data-src="' + data['program'].image + '" class="img-responsive lazyload" />' + data['program'].description);
-          $(".prog").append('<h2 class="main_title">الحلقات</h1>');
-          $num_is = 0;
-          $.each(data['episodes'].data, function(i2, data2) {
-            if (data2.image == null) {
-              data2.image = "http://via.placeholder.com/150x200";
-            }
-            $e_title = data2.title;
-            // Get youtube ID from url ////////////////////
-            var url = data2.link;
-            var videoid = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
-            if (videoid != null) {
-              console.log("video id = ", videoid[1]);
-            } else {
-              console.log("The youtube url is not valid.");
-            }
-            $v = videoid[1];
-            $(".prog").append('<div class="col-xs-6 no-padding"><a href="' + data2.link + '" target="new"><div class="main_item_grad"></div><img data-src="https://img.youtube.com/vi/' + $v +
-              '/0.jpg" class="img-responsive lazyload" /></a></div>');
-          });
-          $("img.lazyload").on().lazyload();
-        });
-      });
-
-    </script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/func_js.js"></script>
     <script type="text/javascript">
+      $(document).ready(function() {
+        Get_prog();
+      });
       app.initialize();
 
     </script>

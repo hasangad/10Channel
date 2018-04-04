@@ -11,7 +11,8 @@
     <link rel='stylesheet' id='bootstrap.min-css' href="bs/scss/bootstrap.css" type='text/css' media='all' />
     <link rel='stylesheet' id='bootstrap.min-css-rtl' href='bs/scss/bootstrap-rtl.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='css-style' href='css/style.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' /> </head>
+    <!--<link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' />-->
+  </head>
 
   <body class="container-fluid no-padding ">
     <div class="preloader"></div>
@@ -49,43 +50,22 @@
         </div>
       </div>
       <!-- End page header -->
-      <div role="progs" class="ui-content posts content"> </div>
+      <div role="progs" class="ui-content progs content"> </div>
       <!-- End of POSTS / UI CONTENT -->
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/lazyload.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-      var url = "https://ten.tv/api/GetPrograms";
-      $.getJSON(url, function(result) {
-        console.log(result);
-        //alert(result);
-        $num_is = 0;
-        $.each(result.data, function(i, data) {
-          if (data.image == null) {
-            data.image = "http://via.placeholder.com/150x200";
-          }
-          if ($num_is == 0) {
-            //alert($num_is);
-            $(".posts").append('<a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /></a>');
-          } else {
-            $(".posts").append('<a href="prog.html?name=' + data.id + '" class="prog col-xs-6 no-padding"><div class="main_item_grad"></div><img data-src="' + data.image + '" class="img-responsive lazyload"/></a>');
-          }
-          $num_is++;
-        });
-        $("img.lazyload").on().lazyload();
-      });
-      $(document).ready(function() {
-        $(".preloader").fadeOut(1500);
-      });
-
-    </script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
-      app.initialize();
+      $(document).ready(function() {
+        get_programs()
+      });
+      //app.initialize();
 
     </script>
+    <script type="text/javascript" src="js/func_js.js"></script>
   </body>
 
 </html>

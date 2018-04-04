@@ -212,6 +212,11 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   font-size: 26px;
 }
 
+.sec_title {
+  color: #009ada;
+  padding: 20px;
+}
+
 .main_item_grad {
   position: absolute;
   z-index: 90;
