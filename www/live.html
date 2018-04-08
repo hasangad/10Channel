@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
   <head>
     <meta charset="UTF-8">
-    <title> قناة 10 </title>
+    <title>
+      قناة 10
+    </title>
     <!--<base href="https://hasangad.com/">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />
-    <link rel='stylesheet' id='bootstrap.min-css' href="bs/scss/bootstrap.css" type='text/css' media='all' />
-    <link rel='stylesheet' id='bootstrap.min-css-rtl' href='bs/scss/bootstrap-rtl.min.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='css-style' href='css/style.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' /> </head>
-
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css"/>
+    <link rel='stylesheet' id='bootstrap.min-css' href="bs/scss/bootstrap.css" type='text/css' media='all'/>
+    <link rel='stylesheet' id='bootstrap.min-css-rtl' href='bs/scss/bootstrap-rtl.min.css' type='text/css' media='all'/>
+    <link rel='stylesheet' id='css-style' href='css/style.css' type='text/css' media='all'/>
+    <link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all'/>
+  </head>
   <body class="container-fluid no-padding ">
     <div class="preloader"></div>
     <div data-role="page" id="about">
@@ -20,27 +21,39 @@
       <div data-role="header" data-position="fixed" class="header">
         <div class="table-responsive">
           <ul>
-            <li> <a href="index.html">
-              الرئيسية
-            </a> </li>
-            <li> <a href="progs.html">
-              البرامج
-            </a> </li>
-            <li> <a href="schedule.html">
-              مواعيد البث
-            </a> </li>
-            <li> <a href="about.html">
-              عن القناة
-            </a> </li>
-            <li class="active"> <a href="live.html">
-              البث المباشر
-            </a> </li>
+            <li>
+              <a href="index.html">
+                الرئيسية
+              </a>
+            </li>
+            <li class="active">
+              <a href="live.html">
+                البث المباشر
+              </a>
+            </li>
+            <li>
+              <a href="progs.html">
+                البرامج
+              </a>
+            </li>
+            <li>
+              <a href="schedule.html">
+                مواعيد البث
+              </a>
+            </li>
+            <li>
+              <a href="about.html">
+                عن القناة
+              </a>
+            </li>
           </ul>
         </div>
       </div>
       <!-- End page header -->
       <div role="about" class="ui-content posts content">
-        <h3 class="main_title">البث المباشر</h3><br><iframe width="560" height="315" src="https://www.youtube.com/embed/tdMw9L2MflY?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" style="width:100%; height:auto; min-height:50vh;" allowfullscreen></iframe> </div>
+        <h3 class="main_title">البث المباشر</h3><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tdMw9L2MflY?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" style="width:100%; height:auto; min-height:50vh;" allowfullscreen="allowfullscreen"></iframe>
+      </div>
       <!-- End of POSTS / UI CONTENT -->
     </div>
     <script src="js/jquery.min.js"></script>
@@ -48,12 +61,10 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
-      $(document).ready(function() {
+      $(document).ready(function () {
         $(".preloader").fadeOut(500);
       });
       app.initialize();
-
     </script>
   </body>
-
 </html>
