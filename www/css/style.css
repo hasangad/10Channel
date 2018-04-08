@@ -165,6 +165,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   overflow-x: scroll;
   overflow-y: hidden;
   margin-bottom: 0;
+  padding-right: 10px;
 }
 
 .header ul li {
@@ -617,7 +618,7 @@ iframe {
   font-family: 'droid arabic kufi', tahoma !important;
 }
 
-, .content p span {
+.content p span {
   color: #ffffff !important;
   line-height: 1.8em;
   font-family: 'droid arabic kufi', tahoma !important;
