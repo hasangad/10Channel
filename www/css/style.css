@@ -612,7 +612,13 @@ iframe {
 
 .content p {
   padding: 20px;
-  color: #ffffff;
+  color: #ffffff !important;
+  line-height: 1.8em;
+  font-family: 'droid arabic kufi', tahoma !important;
+}
+
+, .content p span {
+  color: #ffffff !important;
   line-height: 1.8em;
   font-family: 'droid arabic kufi', tahoma !important;
 }
