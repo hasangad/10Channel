@@ -12,14 +12,29 @@ function GetMainpagePrograms() {
 				data.image = "http://via.placeholder.com/150x200";
 			}
 			if ($num_is == 0) {
-				$(".carousel-inner")
-					.append('<div class="carousel-item active"><a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>يعرض الآن</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+				if (data.id !== null) {
+					$(".carousel-inner")
+						.append('<div class="carousel-item active"><a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>يعرض الآن</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+				} else {
+					$(".carousel-inner")
+						.append('<div class="carousel-item active"><a class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>يعرض الآن</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+				}
 			} else if ($num_is == 1) {
-				$(".carousel-inner")
-					.append('<div class="carousel-item"><a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>التالي</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+				if (data.id !== null) {
+					$(".carousel-inner")
+						.append('<div class="carousel-item"><a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>التالي</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+				} else {
+					$(".carousel-inner")
+						.append('<div class="carousel-item"><a  class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>التالي</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+				}
 			} else if ($num_is == 2) {
-				$(".carousel-inner")
-					.append('<div class="carousel-item"><a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>لاحقاً</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+				if (data.id !== null) {
+					$(".carousel-inner")
+						.append('<div class="carousel-item"><a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>لاحقاً</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+				} else {
+					$(".carousel-inner")
+						.append('<div class="carousel-item"><a class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>لاحقاً</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+				}
 			}
 			$num_is++;
 		});

@@ -139,6 +139,10 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   margin-bottom: 30%;
 }
 
+#main_page, #progs, #live, #schedule, #abut {
+  padding-top: 10vh !important;
+}
+
 .ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
   background: rgb(91, 109, 124);
   background: -moz-radial-gradient(center, ellipse cover, rgba(91, 109, 124, 1) 0%, rgba(49, 57, 68, 1) 100%);
@@ -148,7 +152,11 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 }
 
 .header {
+  z-index: 999999;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   border-bottom: none;
   height: auto;
   border-top: none;
