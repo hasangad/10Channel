@@ -53,7 +53,7 @@ background-size: 100% 100%;}
 .splash ul li { display: block; margin-bottom: 20px; text-align: center;}
 
 .back_to_progs {
-  position: absolute;
+  position: fixed;
   right: -2%;
   top: 2%;
   z-index: 999999;
@@ -151,8 +151,8 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   margin-bottom: 30%;
 }
 
-#main_page, #progs, #live, #schedule, #abut {
-  padding-top: 10vh !important;
+#main_page, #progs, #live, #schedule, #abut , #about {
+  padding-top: 2vh !important;
 }
 
 .ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
