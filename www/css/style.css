@@ -216,7 +216,8 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 }
 
 .header ul li {
-  display: inline-table;
+  white-space: nowrap;
+  display: inline-block;
   text-shadow: none;
 }
 
@@ -226,6 +227,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   color: #ffffff;
   font-size: 1em;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 #menu {
