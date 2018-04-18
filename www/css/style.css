@@ -206,7 +206,8 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 }
 
 .header ul {
-  width: 150%;
+  display: block;
+  width: 175%;
   list-style: none;
   /*overflow-x: scroll;
   overflow-y: hidden;*/
