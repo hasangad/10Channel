@@ -120,7 +120,7 @@ function Get_prog() {
 			}
 			$program_name = data['program'].title;
 			$(".prog")
-				.append('<h1 class="main_title" style="font-size:1.2em">' + $program_name + '</h1><img data-src="' + data['program'].image + '" class="img-responsive lazyload" />' + data['program'].description);
+				.append('<h1 class="main_title" style="font-size:1.2em; padding-right:20%; margin-top:5%;">' + $program_name + '</h1><img data-src="' + data['program'].image + '" class="img-responsive lazyload" />' + data['program'].description);
 			$(".prog")
 				.append('<h2 class="main_title">الحلقات</h1>');
 			$num_is = 0;
