@@ -16,10 +16,10 @@
   <preference name="stay-in-webview" value="false"/>
   <!--<preference name="ios-statusbarstyle" value="black-opaque"/>-->
   <plugin name="cordova-plugin-statusbar" />
-    <!--<preference name="ios-statusbarstyle" value="black-opaque" />-->
     <preference name="StatusBarOverlaysWebView" value="false" />
     <!--<preference name="StatusBarBackgroundColor" value="#ffbb55" />-->
-    <preference name="StatusBarStyle" value="blacktranslucent" />
+    <preference name="StatusBarStyle" value="black-opaque" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
 
   <preference name="detect-data-types" value="true"/>
   <preference name="exit-on-suspend" value="false"/>
