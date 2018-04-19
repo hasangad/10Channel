@@ -18,7 +18,7 @@
   <plugin name="cordova-plugin-statusbar" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <!--<preference name="StatusBarBackgroundColor" value="#ffbb55" />-->
-    <preference name="StatusBarStyle" value="black-opaque" />
+    <!--<preference name="StatusBarStyle" value="black-opaque" />-->
     <preference name="ios-statusbarstyle" value="black-opaque" />
 
   <preference name="detect-data-types" value="true"/>
