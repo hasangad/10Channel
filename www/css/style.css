@@ -181,8 +181,12 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   padding-top: 1% !important;
 }
 
-#main_page, #progs, .prog, #live, #abut, #about {
+#main_page, #progs, #live, #abut, #about {
   padding-top: 13% !important;
+}
+
+.prog {
+  padding-top: 16% !important;
 }
 
 .ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
