@@ -78,7 +78,7 @@ body, .ui-page-theme-a .ui-panel-wrapper, .ui-page {
 .back_to_progs {
   position: fixed;
   right: -2%;
-  top: 2%;
+  top: 12%;
   z-index: 999999;
   background: #009ada;
   border-radius: 4px;
@@ -181,7 +181,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   padding-top: 1% !important;
 }
 
-#main_page, #progs, #live, #abut, #about {
+#main_page, #progs, .prog, #live, #abut, #about {
   padding-top: 13% !important;
 }
 
