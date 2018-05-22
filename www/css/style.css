@@ -763,6 +763,37 @@ li.active a, li a.active {
   background-color: #4c4f63
 }
 
+#about {
+  padding-bottom: 20%;
+}
+
+.social_holder {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.92;
+  z-index: 99;
+}
+
+.social_holder .social_ico.youtube_ico {
+  background: #dd472e;
+}
+
+.social_holder .social_ico.twitter_ico {
+  background: #50abf1;
+}
+
+.social_holder .social_ico.facebook_ico {
+  background: #3a549f;
+}
+
+.social_holder .social_ico i {
+  font-size: 2.5em;
+  color: #ffffff;
+  padding: 15px;
+}
+
 /* Folders */
 
 /*# sourceMappingURL=style.css.map */
