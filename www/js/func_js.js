@@ -5,21 +5,21 @@
 function GetMainpagePrograms() {
 	var GetMainpagePrograms = "http://ten.tv/api/GetMainpagePrograms";
 	$.getJSON(GetMainpagePrograms, function(result) {
-		//console.log(result);
+		console.log(result.slides);
 		$num_is = 0;
-		$.each(result, function(i, data) {
+		$.each(result.slides, function(i, data) {
 			if (data.image == null) {
 				data.image = "http://via.placeholder.com/150x200";
 			}
 			if ($num_is == 0) {
 				if (data.id !== null) {
 					$(".carousel-inner")
-						.append('<div class="carousel-item active"><a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>يعرض الآن</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+						.append('<div class="carousel-item active"><a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.media_url + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"><small>بتوقيت القاهرة</small></div></a></div>');
 				} else {
 					$(".carousel-inner")
-						.append('<div class="carousel-item active"><a class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>يعرض الآن</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+						.append('<div class="carousel-item active"><a class="main_item"><div class="main_item_grad"></div><img src="' + data.media_url + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <small>بتوقيت القاهرة</small></div></a></div>');
 				}
-			} else if ($num_is == 1) {
+			} /*else if ($num_is == 1) {
 				if (data.id !== null) {
 					$(".carousel-inner")
 						.append('<div class="carousel-item"><a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>التالي</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
@@ -31,12 +31,36 @@ function GetMainpagePrograms() {
 				if (data.id !== null) {
 					$(".carousel-inner")
 						.append('<div class="carousel-item"><a href="prog.html?name=' + data.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>لاحقاً</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
-				} else {
+				}*/ else {
 					$(".carousel-inner")
-						.append('<div class="carousel-item"><a class="main_item"><div class="main_item_grad"></div><img src="' + data.image + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"> <span>لاحقاً</span><h2>' + data.show_at + '</h2> <small>بتوقيت القاهرة</small></div></a></div>');
+						.append('<div class="carousel-item"><a class="main_item"><div class="main_item_grad"></div><img src="' + data.media_url + '" class="img-responsive" /> <img class="ten_logo_onfly" src="images/logo.jpg" /><div class="ten_logo_onfly_text"><small>بتوقيت القاهرة</small></div></a></div>');
 				}
-			}
+		/*	}*/
 			$num_is++;
+		});
+		$("img.lazyload")
+			.on()
+			.lazyload();
+		$(".preloader")
+			.fadeOut(500);
+	});
+}
+// GetFeatures
+
+function GetFeatures() {
+	var GetFeatures = "http://ten.tv/api/GetMainpagePrograms";
+	$.getJSON(GetFeatures, function(result) {
+		console.log(result.featurePrograms);
+		//$num_is = 0;
+		$.each(result.featurePrograms, function(i, data) {
+			if (data.image == null) {
+				data.image = "http://via.placeholder.com/150x200";
+			}
+				if (data.id !== null) {
+					$(".features_progs")
+						.append('<a href="prog.html?name=' + data.id + '" class="prog col-xs-6 padding-top-10"><div class="main_item_grad"></div><img data-src="' + data.image + '"  class="img-responsive lazyload" src="' + data.image + '" ></a>');
+				}
+		//	$num_is++;
 		});
 		$("img.lazyload")
 			.on()
@@ -73,9 +97,12 @@ function GetSoon() {
 function get_programs() {
 	var progs = "https://ten.tv/api/GetPrograms";
 	$.getJSON(progs, function(result2) {
-		//console.log(result);
+		console.log(result2);
 		$num_is = 0;
-		$.each(result2.data, function(i, data) {
+		$.each(result2, function(i, data) {
+
+
+			//alert('data.image');
 			if (data.image == null) {
 				data.image = "http://via.placeholder.com/150x200";
 			}
