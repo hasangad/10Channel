@@ -1,3 +1,16 @@
+// SOURCE :: https://forums.adobe.com/thread/2286459#
+// NOTICE :: To solve the links opening in the browser vs in the app, the smart JS fellow down the hall wrote this for me:
+$('a').click(function(e) {
+
+  if (this.href.substr(0,4) === 'http') {
+
+    e.preventDefault();
+
+    cordova.InAppBrowser.open(this.href, '_system');
+
+  }
+
+});
 // Trim words function
 function truncate(str, no_words) {
     return str.split(" ").splice(0,no_words).join(" ");

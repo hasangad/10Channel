@@ -15,16 +15,20 @@
   <!--<preference name="target-device" value="universal"/>-->
   <preference name="fullscreen" value="true"/>
   <preference name="webviewbounce" value="false"/>
-<preference name="EnableViewportScale" value="true"/>
+<preference name="EnableViewportScale" value="false"/>
   <preference name="DisallowOverscroll" value="false" />
   <preference name="prerendered-icon" value="true"/>
-  <preference name="stay-in-webview" value="false"/>
+  <preference name="stay-in-webview" value="true"/>
+  <preference name="AllowInlineMediaPlayback" value="true" />
+   <preference name="MediaPlaybackRequiresUserAction" value="false" />
+
   <!--<preference name="ios-statusbarstyle" value="black-opaque"/>-->
   <plugin name="cordova-plugin-statusbar" />
     <!--<preference name="ios-statusbarstyle" value="black-opaque" />-->
     <preference name="StatusBarOverlaysWebView" value="false" />
     <!---<preference name="StatusBarBackgroundColor" value="#222222" />-->
     <preference name="StatusBarStyle" value="lightcontent" />
+
 
   <preference name="detect-data-types" value="true"/>
   <preference name="exit-on-suspend" value="false"/>
@@ -131,6 +135,10 @@
   <allow-intent href="sms:*"/>
   <allow-intent href="mailto:*"/>
   <allow-intent href="geo:*"/>
+
+   <allow-navigation href="*youtube*" />
+
+   <allow-navigation href="*ytimg*" />
   <platform name="android">
     <allow-intent href="market:*"/>
   </platform>
