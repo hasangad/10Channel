@@ -128,6 +128,8 @@
   <splash height="1242" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2208"/>
   <splash height="640" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="1136"/>
   <splash height="1536" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2048"/>
+  <splash height="1125" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2436"/>
+  <splash height="2436" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="1125"/>
 
   <preference name="SplashScreenDelay" value="1500"/>
   <access origin="*"/>
