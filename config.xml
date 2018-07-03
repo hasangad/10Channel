@@ -132,8 +132,7 @@
   <splash height="2436" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="1125"/>
 
 
-  <!-— 2732x2732 -->
-  <splash src=”www/res/screen/ios/Default@2x~universal~anyany.png” />
+  <splash src="www/res/screen/ios/Default@2x~universal~anyany.png" />
 
 
   <preference name="SplashScreenDelay" value="1500"/>
