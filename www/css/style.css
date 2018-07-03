@@ -694,6 +694,9 @@ iframe {
   font-family: 'droid arabic kufi', tahoma !important;
 }
 
+.content p * { line-height: 1.8em !important;
+font-size: 14px !important;}
+
 .content .news-item p {   padding: 0px; margin-bottom: 2px;}
 
 .news-item { border-bottom: 1px solid #777777;}
