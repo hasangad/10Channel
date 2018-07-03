@@ -784,6 +784,12 @@ li.active a, li a.active {
   z-index: 99;
 }
 
+.posts .social_holder {
+  position: relative;
+  margin-top: 10px;
+  top:10px;
+}
+
 .social_holder .social_ico.youtube_ico {
   background: #dd472e;
 }
