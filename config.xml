@@ -8,7 +8,7 @@
   <author email="hasangad.com@gmail.com" href="http://ten.tv">
     Gadency Team
   </author>
-  <preference name="BackgroundColor" value="0xFF000000"/>
+  <preference name="BackgroundColor" value="0xFF009ada"/>
 
   <preference name="phonegap-version" value="cli-7.0.1"/>
   <preference name='pgb-builder-version' value='1' />
