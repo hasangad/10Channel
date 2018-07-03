@@ -35,10 +35,12 @@ p {
   font-size: small;
 }
 
-body, .ui-page-theme-a .ui-panel-wrapper, .ui-page {
+.ui-page-theme-a .ui-panel-wrapper, .ui-page {
   background: #212331;
   font-family: 'droid arabic kufi', tahoma !important;
 }
+
+body { background: black;}
 
 .btn-default {
   background: #e9e9e9;
