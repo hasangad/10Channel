@@ -187,6 +187,12 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 
 #main_page, #progs, #live, #abut, #about {
   padding-top: 11vh !important;
+  position: relative;
+margin: 0;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
 }
 
 .prog {
@@ -230,9 +236,11 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   overflow: hidden;
   margin-bottom: 0;
   padding-right: 10px;
+  height: 100%;
 }
 
 .header ul li {
+  height: 100%;
   white-space: nowrap;
   display: inline-block;
   text-shadow: none;
@@ -242,9 +250,10 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   display: block;
   padding: 30% 12px 10% 12px;
   color: #ffffff;
-  font-size: 1em;
+  font-size: 14px;
   font-weight: 400;
   white-space: nowrap;
+  height: 100%;
 }
 
 #menu {
@@ -681,6 +690,7 @@ iframe {
   padding: 20px;
   color: #ffffff !important;
   line-height: 1.8em;
+  font-size: 14px;
   font-family: 'droid arabic kufi', tahoma !important;
 }
 
