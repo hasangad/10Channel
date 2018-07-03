@@ -40,7 +40,9 @@ p {
   font-family: 'droid arabic kufi', tahoma !important;
 }
 
-body { background: black;}
+body { background: black;
+padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);}
+
 
 .btn-default {
   background: #e9e9e9;
@@ -185,6 +187,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   padding-top: 1% !important;
 }
 
+#progs {  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
 #main_page, #progs, #live, #abut, #about {
   padding-top: 11vh !important;
   position: relative;
