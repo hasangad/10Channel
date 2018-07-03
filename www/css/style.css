@@ -40,7 +40,7 @@ p {
   font-family: 'droid arabic kufi', tahoma !important;
 }
 
-body { background: black;
+body { background: black !important;
 padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);}
 
 
