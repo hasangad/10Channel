@@ -1,3 +1,7 @@
+// Trim words function
+function truncate(str, no_words) {
+    return str.split(" ").splice(0,no_words).join(" ");
+}
 // Image Caching
 //var cache = require("imgcache");
 // Script -- Index
@@ -148,10 +152,12 @@ function Get_prog() {
 			$program_name = data['program'].title;
 			$(".prog")
 				.append('<h1 class="main_title" style="font-size:1.2em; padding-right:20%; margin-top:5%;">' + $program_name + '</h1><img data-src="' + data['program'].image + '" class="img-responsive lazyload" />' + data['program'].description);
-			$(".prog")
-				.append('<h2 class="main_title">الحلقات</h1>');
+			/*$(".prog")
+				.append('<h2 class="main_title">الحلقات</h1>');*/
 			$num_is = 0;
 			$.each(data['episodes'].data, function(i2, data2) {
+				if($num_is == 0 ) { $(".prog")
+					.append('<h2 class="main_title">الحلقات</h1>'); }
 				if (data2.image == null) {
 					data2.image = "http://via.placeholder.com/150x200";
 				}
@@ -167,7 +173,64 @@ function Get_prog() {
 				$v = videoid[1];
 				$(".prog")
 					.append('<div class="col-xs-6 no-padding"><a href="' + data2.link + '" target="new"><div class="main_item_grad"></div><img data-src="https://img.youtube.com/vi/' + $v + '/0.jpg" class="img-responsive lazyload" /></a></div>');
+					$num_is++;
 			});
+			$("img.lazyload")
+				.on()
+				.lazyload();
+			$(".preloader")
+				.fadeOut(500);
+		});
+	}
+}
+
+// Get News
+function get_news() {
+	var news_result = "https://ten.tv/api/news";
+	$.getJSON(news_result, function(news) {
+		console.log(news);
+		$num_is = 0;
+		$.each(news.data, function(i, data_news) {
+
+
+			//alert(data.image);
+			if (data_news.image == null) {
+				data_news.image = "http://via.placeholder.com/150x200";
+			}
+		/*	if ($num_is == 0) {
+				//alert($num_is);
+				$(".progs")
+					.append('<a href="news-single.html?name=' + data_news.id + '" class="main_item"><div class="main_item_grad"></div><img src="' + data_news.image + '" class="img-responsive" /></a>');
+			} else {*/
+			var news_Content = data_news.content;
+			$news_Content = $(news_Content).text();
+				$(".progs")
+					.append('<a href="news-single.html?name=' + data_news.id + '" class="news-item col-xs-12 no-padding"><img data-src="' + data_news.image + '" class="img-responsive lazyload col-xs-4"/><div class="col-xs-8"><b>'+truncate(data_news.title,4)+'</b><p>'+truncate($news_Content,10)+'</p><i>'+data_news.updated_at+'</i></div></a>');
+			/*}*/
+			$num_is++;
+		});
+		$("img.lazyload")
+			.on()
+			.lazyload();
+		$(".preloader")
+			.fadeOut(500);
+	});
+}
+
+//alert(prog_name);
+function Get_news_single() {
+	if (prog_name) {
+		var prog = "http://ten.tv/api/newsDetails?id=" + prog_name;
+		$.getJSON(prog, function(data) {
+			//console.log(result);
+			if (data.image == null) {
+				data.image = "http://via.placeholder.com/150x200";
+			}
+			$program_name = data.title;
+			$(".prog")
+				.append('<h1 class="main_title" style="font-size:1.2em; padding-right:20%; margin-top:5%;">' + $program_name + '</h1><img data-src="' + data.image + '" class="img-responsive lazyload" /><p class="date_is">'+data.updated_at+'</p>' + data.content);
+			$num_is = 0;
+
 			$("img.lazyload")
 				.on()
 				.lazyload();
