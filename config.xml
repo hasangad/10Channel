@@ -115,7 +115,7 @@
   <splash platform="android" qualifier="fr-xhdpi" src="www/images/splash.jpg"/>
   <splash platform="android" qualifier="port-xxhdpi" src="www/images/splash.jpg"/>
   <splash platform="android" qualifier="land-xxhdpi" src="www/images/splash.jpg"/>
-  <splash height="480" platform="ios" src="www/res/screen/ios/screen-iphone-portrait.png" width="320"/>
+  <!--<splash height="480" platform="ios" src="www/res/screen/ios/screen-iphone-portrait.png" width="320"/>
   <splash height="960" platform="ios" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640"/>
   <splash height="1136" platform="ios" src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640"/>
   <splash height="1024" platform="ios" src="www/res/screen/ios/screen-ipad-portrait.png" width="768"/>
@@ -130,7 +130,7 @@
   <splash height="640" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="1136"/>
   <splash height="1536" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2048"/>
   <splash height="1125" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2436"/>
-  <splash height="2436" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="1125"/>
+  <splash height="2436" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="1125"/>-->
 
 
   <splash src="www/res/screen/ios/Default@2x~universal~anyany.png" />
