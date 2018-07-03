@@ -9,7 +9,7 @@
     Gadency Team
   </author>
   <preference name="BackgroundColor" value="000000"/>
-  <preference name="phonegap-version" value="cli-6.5.0"/>
+  <preference name="phonegap-version" value="cli-7.0.1"/>
   <preference name="permissions" value="none"/>
   <!--<preference name="orientation" value="default"/>-->
   <!--<preference name="target-device" value="universal"/>-->
@@ -129,6 +129,9 @@
   <preference name="SplashScreenDelay" value="1500"/>
   <access origin="*"/>
   <plugin name="cordova-plugin-whitelist" version="1"/>
+
+  <engine name="ios" spec="latest" />
+
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
   <allow-intent href="tel:*"/>
