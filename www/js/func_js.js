@@ -2,13 +2,13 @@
 // NOTICE :: To solve the links opening in the browser vs in the app, the smart JS fellow down the hall wrote this for me:
 $('a').click(function(e) {
 
-  if (this.href.substr(0,4) === 'http') {
+  /*if (this.href.substr(0,4) === 'http') {
 
     e.preventDefault();
 
     cordova.InAppBrowser.open(this.href, '_system');
 
-  }
+  }*/
 
 });
 // Trim words function
